@@ -4,7 +4,7 @@ import connectDB from './database/db.js'; // connect to database
 import router from './controllers/Controller.js'; // import the router
 connectDB();
 
-const port = 444;
+const port = 3000;
 const app = express();
 
 app.use(cors());
