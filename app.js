@@ -1,12 +1,15 @@
 import express from 'express';
 import cors from 'cors'; // prevent CORS errors
+import { config } from 'dotenv';
 import connectDB from './database/db.js'; // connect to database
 import router from './controllers/Controller.js'; // import the router
+const PORT = process.env.PORT || 3000;
 connectDB();
-
-const port = 444;
 const app = express();
 
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
 app.use(cors());
 app.use(express.json()); // parse JSON bodies
 
@@ -14,6 +17,6 @@ app.use(express.json()); // parse JSON bodies
 
 app.use('/api', router); // use the router
 
-app.listen(port, 'localhost',  () => {
-  console.log(`Server running on port ${port}`);
+app.listen(PORT, 'localhost',  () => {
+  console.log(`Server running on port ${PORT}`);
 });
