@@ -6,10 +6,6 @@ import router from './controllers/Controller.js'; // import the router
 const PORT = process.env.PORT || 3000;
 connectDB();
 const app = express();
-
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
 app.use(cors());
 app.use(express.json()); // parse JSON bodies
 
@@ -17,6 +13,6 @@ app.use(express.json()); // parse JSON bodies
 
 app.use('/api', router); // use the router
 
-app.listen(PORT, 'localhost',  () => {
-  console.log(`Server running on port ${PORT}`);
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
