@@ -27,6 +27,7 @@ router.post('/apuntes', async (req, res) => {
     Asignatura: req.body.Asignatura,
     Tema: req.body.Tema,
     Apuntes: req.body.Apuntes,
+    creador: req.body.creador
   });
   try {
     const newApuntes = await apuntes.save();
