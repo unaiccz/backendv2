@@ -11,6 +11,10 @@ const ExamenesSchema = new mongoose.Schema({
     Temas: {
         type: String,
         required: true
+    },
+    creador: {
+        type: "String",
+        default: "Anónimo"
     }
 });
 

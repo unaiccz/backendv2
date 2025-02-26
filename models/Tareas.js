@@ -14,6 +14,10 @@ const TareasSchema = new mongoose.Schema({
     },
     DatosInteres: {
         type: String
+    },
+    creador: {
+        type: "String",
+        default: "Anónimo"
     }
 });
 

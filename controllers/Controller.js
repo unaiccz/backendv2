@@ -85,6 +85,7 @@ router.post('/examenes', async (req, res) => {
     Fecha: req.body.Fecha,
     Asignatura: req.body.Asignatura,
     Temas: req.body.Temas,
+    creador: req.body.creador
   });
   try {
     const newExamenes = await examenes.save();
@@ -142,7 +143,8 @@ router.post('/tareas', async (req, res) => {
     Asignatura: req.body.Asignatura,
     Tareas: req.body.Tareas,
     FechaLimite: req.body.FechaLimite,
-    DatosInteres: req.body.DatosInteres
+    DatosInteres: req.body.DatosInteres,
+    creador: req.body.creador
   });
   try {
     const newTareas = await tareas.save();
